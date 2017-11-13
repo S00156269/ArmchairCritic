@@ -1,0 +1,18 @@
+.panel-heading { 
+    background-color: #2e6da4;
+    height: 80px;
+}
+
+.btn {
+    float: right;
+    margin-right: 10px;
+    height: 40px;
+    width: 100px;
+}
+
+.searchBar{
+    float: right;
+    margin-right: 10px;
+    height: 40px;
+    width: 200px;
+}
