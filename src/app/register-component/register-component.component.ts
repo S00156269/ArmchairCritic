@@ -1,3 +1,4 @@
+import { AuthService } from '../shared/auth.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
@@ -6,11 +7,23 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./register-component.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class RegisterComponentComponent implements OnInit {
+export class RegisterComponentComponent {
+  email: string;
+  password: string;
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
-  ngOnInit() {
+  signup() {
+    this.authService.signup(this.email, this.password);
+    this.email = this.password = '';
   }
 
+  login() {
+    this.authService.login(this.email, this.password);
+    this.email = this.password = '';
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 }

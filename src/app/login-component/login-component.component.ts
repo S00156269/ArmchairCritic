@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AuthService } from '../shared/auth.service'
 
 @Component({
   selector: 'app-login-component',
@@ -6,11 +7,24 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./login-component.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class LoginComponentComponent implements OnInit {
+export class LoginComponentComponent {
+  email: string;
+  password: string;
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
-  ngOnInit() {
+  signup() {
+    this.authService.signup(this.email, this.password);
+    this.email = this.password = '';
+  }
+
+  login() {
+    this.authService.login(this.email, this.password);
+    this.email = this.password = '';
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 }
