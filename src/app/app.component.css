@@ -1,6 +1,6 @@
 .panel-heading { 
     background-color: #2e6da4;
-    height: 80px;
+    height: 60px;
 }
 
 .btn {
@@ -8,6 +8,7 @@
     margin-right: 10px;
     height: 40px;
     width: 100px;
+    text-align: center;
 }
 
 .searchBar{
@@ -15,4 +16,9 @@
     margin-right: 10px;
     height: 40px;
     width: 200px;
+}
+
+#menu-toggle{
+    float: left;
+    background: #830404;
 }
