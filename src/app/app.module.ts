@@ -7,9 +7,14 @@ import { FilmsComponentComponent } from './films-component/films-component.compo
 import { ListComponentComponent } from './list-component/list-component.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
+import { AuthService } from './shared/auth.service';
+import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponentComponent}
+  { path: 'login', component: LoginComponentComponent},
+  { path: 'register', component: RegisterComponentComponent}
 ]
 
 @NgModule({
@@ -21,6 +26,8 @@ const appRoutes: Routes = [
     RegisterComponentComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
@@ -28,7 +35,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
