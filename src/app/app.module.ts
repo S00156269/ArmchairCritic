@@ -1,3 +1,4 @@
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -7,6 +8,9 @@ import { ListComponentComponent } from './list-component/list-component.componen
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
 
+const appRoutes: Routes = [
+  { path: 'login', component: LoginComponentComponent}
+]
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { RegisterComponentComponent } from './register-component/register-compon
     RegisterComponentComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
     BrowserModule,
     FormsModule
   ],
