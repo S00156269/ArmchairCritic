@@ -2,19 +2,20 @@
   <h2>Register</h2>
   <form>
     <div class="form-group">
-      <label for="username">Email</label>
-      <input type="text" name="email" [(ngModel)]="email">
+      <label for="username" class="col-form-label">Email</label>
+      <input type="text" name="email" [(ngModel)]="email" class="form-control">
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" name="password">
+      <label for="password" class="col-form-label">Password</label>
+      <input type="password" name="password" class="form-control">
     </div>
     <div class="form-group">
-      <label for="confirmPassword">Password</label>
-      <input type="password" name="confirmPassword" [(ngModel)]="password">
+      <label for="confirmPassword" class="col-form-label">Confirm password</label>
+      <input type="password" name="confirmPassword" [(ngModel)]="password" class="form-control">
     </div>
+    <div class="alert alert-danger" *ngIf="">Password does not match</div>   
     <div class="form-group">
-      <button class="btn btn-link" (click)='signup()'>Register</button>
+      <button class="btn btn-primary" (click)='signup()'>Register</button>
     </div>
   </form>
 </div>

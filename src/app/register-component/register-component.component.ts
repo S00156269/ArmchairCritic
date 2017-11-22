@@ -10,6 +10,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class RegisterComponentComponent {
   email: string;
   password: string;
+  confirmPassword: string;
+  isValid: boolean;
+
+  checkPassword(){
+    if(this.password!= this.confirmPassword){
+      
+    }
+    else
+      this.isValid = false;
+  }
 
   constructor(public authService: AuthService) { }
 
