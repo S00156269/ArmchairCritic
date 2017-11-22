@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FilmsComponentComponent } from './films-component/films-component.component';
 import { ListComponentComponent } from './list-component/list-component.component';
+import { SearchComponent } from './search/search.component';
+import { ReviewersComponent } from './reviewers/reviewers.component';
+import { ProfileComponent } from './profile/profile.component';
+
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
 import { AuthService } from './shared/auth.service';
@@ -22,6 +26,9 @@ const appRoutes: Routes = [
     AppComponent,
     FilmsComponentComponent,
     ListComponentComponent,
+    SearchComponent,
+    ReviewersComponent,
+    ProfileComponent
     LoginComponentComponent,
     RegisterComponentComponent
   ],
