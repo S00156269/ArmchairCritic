@@ -4,21 +4,20 @@
 }
 
 .btn {
-    float: right;
+    float: center;
     margin-right: 10px;
     height: 40px;
     width: 100px;
     text-align: center;
 }
 
-.searchBar{
-    float: right;
-    margin-right: 10px;
-    height: 40px;
-    width: 200px;
-}
-
 #menu-toggle{
     float: left;
     background: #830404;
+}
+
+#searchBar{
+    float: right;
+    height: 40px;
+    width: 200px;
 }

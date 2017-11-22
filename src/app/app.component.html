@@ -5,10 +5,17 @@
   <div class='panel-heading'>
       <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">&#9776;</a>
       Welcome to {{title}}!
-      <input class='searchBar' type = 'text'>
+
+      <input id= "searchBar" type="text" #MovieTitle>
+      <button id= "searchBarButton" (click)="searchMovie(MovieTitle.value)">Search</button>
+
       <button class='btn btn-primary'>Films</button> <!-- (click) = 'toggleImage()' -->
       <button class='btn btn-primary'>List</button>
       <button class='btn btn-primary'>Reviewers</button>
+  </div>
+
+  <div id="MainBody">
+      <app-films-component></app-films-component>
   </div>
 
 </div>
