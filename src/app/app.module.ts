@@ -6,13 +6,19 @@ import {Http} from '@angular/http';
 import { AppComponent } from './app.component';
 import { FilmsComponentComponent } from './films-component/films-component.component';
 import { ListComponentComponent } from './list-component/list-component.component';
+import { SearchComponent } from './search/search.component';
+import { ReviewersComponent } from './reviewers/reviewers.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsComponentComponent,
-    ListComponentComponent
+    ListComponentComponent,
+    SearchComponent,
+    ReviewersComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule
