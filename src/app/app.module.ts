@@ -8,7 +8,6 @@ import { ListComponentComponent } from './list-component/list-component.componen
 import { SearchComponent } from './search/search.component';
 import { ReviewersComponent } from './reviewers/reviewers.component';
 import { ProfileComponent } from './profile/profile.component';
-
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
 import { AuthService } from './shared/auth.service';
@@ -18,7 +17,9 @@ import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponentComponent},
-  { path: 'register', component: RegisterComponentComponent}
+  { path: 'register', component: RegisterComponentComponent},
+  { path: 'search', component: SearchComponent},
+  { path: 'profile', component: ProfileComponent}
 ]
 
 @NgModule({
@@ -28,7 +29,7 @@ const appRoutes: Routes = [
     ListComponentComponent,
     SearchComponent,
     ReviewersComponent,
-    ProfileComponent
+    ProfileComponent,
     LoginComponentComponent,
     RegisterComponentComponent
   ],
