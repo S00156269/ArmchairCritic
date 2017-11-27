@@ -15,6 +15,7 @@ import { AuthService } from './shared/auth.service';
 import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponentComponent},
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     ReviewersComponent,
     ProfileComponent,
     LoginComponentComponent,
-    RegisterComponentComponent
+    RegisterComponentComponent,
+    EditprofileComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
