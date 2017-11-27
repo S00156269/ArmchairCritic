@@ -21,7 +21,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponentComponent},
   { path: 'register', component: RegisterComponentComponent},
   { path: 'search', component: SearchComponent},
-  { path: 'profile', component: ProfileComponent}
+  { path: 'profile', component: ProfileComponent},
+  { path: 'editprofile', component: EditprofileComponent}
 ]
 
 @NgModule({

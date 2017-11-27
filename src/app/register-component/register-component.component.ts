@@ -1,7 +1,7 @@
 import { AuthService } from '../shared/auth.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router/src/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-component',
@@ -20,6 +20,9 @@ export class RegisterComponentComponent {
   }
 
   validate(){
+    if(this.password.length <6 ){
+      alert("Password needs to be longer than 6 characters.");
+    }
     if(this.password == this.confirmpassword){
       this.signup();
     }
@@ -30,6 +33,6 @@ export class RegisterComponentComponent {
   signup() {
     this.authService.signup(this.email, this.password);
     this.email = this.password = '';
-    this.router.navigate(['edit']);
+    this.router.navigate(['editprofile']);
   }
 }
