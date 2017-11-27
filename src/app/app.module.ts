@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FilmsComponentComponent } from './films-component/films-component.component';
 import { ListComponentComponent } from './list-component/list-component.component';
@@ -41,8 +42,9 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule,
-    FormsModule
-  ],
+    FormsModule,
+    ReactiveFormsModule,
+    ],
   providers: [AuthService, AngularFireAuth],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,7 @@
 import { AuthService } from '../shared/auth.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router/src/router';
 
 @Component({
   selector: 'app-register-component',
@@ -8,32 +10,26 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class RegisterComponentComponent {
+  form: FormGroup;
   email: string;
   password: string;
-  confirmPassword: string;
-  isValid: boolean;
+  confirmpassword: string;
 
-  checkPassword(){
-    if(this.password!= this.confirmPassword){
-      
-    }
-    else
-      this.isValid = false;
+  constructor(public authService: AuthService, public router: Router) {
+
   }
 
-  constructor(public authService: AuthService) { }
+  validate(){
+    if(this.password == this.confirmpassword){
+      this.signup();
+    }
+    else
+      alert("Passwords don't match");
+  }
 
   signup() {
     this.authService.signup(this.email, this.password);
     this.email = this.password = '';
-  }
-
-  login() {
-    this.authService.login(this.email, this.password);
-    this.email = this.password = '';
-  }
-
-  logout() {
-    this.authService.logout();
+    this.router.navigate(['edit']);
   }
 }

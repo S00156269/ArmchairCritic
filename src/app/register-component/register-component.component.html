@@ -3,18 +3,18 @@
   <form>
     <div class="form-group">
       <label for="username" class="col-form-label">Email</label>
-      <input type="text" name="email" [(ngModel)]="email" class="form-control">
+      <input type="text" name="email" class="form-control" [(ngModel)]="email">
     </div>
     <div class="form-group">
       <label for="password" class="col-form-label">Password</label>
-      <input type="password" name="password" class="form-control">
+      <input type="password" name="password" class="form-control" [(ngModel)]="password">
     </div>
     <div class="form-group">
       <label for="confirmPassword" class="col-form-label">Confirm password</label>
-      <input type="password" name="confirmPassword" [(ngModel)]="password" class="form-control">
+      <input type="password" name="confirmPassword"  class="form-control" [(ngModel)]="confirmpassword">
     </div>
     <div class="form-group">
-      <button class="btn btn-primary" (click)='signup()'>Register</button>
+      <button class="btn btn-primary" (click)='validate()'>Register</button>
     </div>
   </form>
 </div>
