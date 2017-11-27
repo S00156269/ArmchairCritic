@@ -1,24 +1,50 @@
-<html>
-      
-  <body>
 <div id="wrapper" class='panel panel-primary'>
-  <div class='panel-heading'>
-      <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">&#9776;</a>
-      Welcome to {{title}}!
+    <div class='panel-heading'>
 
-      <input id= "searchBar" type="text" #MovieTitle>
-      <button id= "searchBarButton" (click)="searchMovie(MovieTitle.value)">Search</button>
+        <a class="btn btn-secondary"  id="menuToggle">&#9776;</a>
 
-      <button class='btn btn-primary'>Films</button> <!-- (click) = 'toggleImage()' -->
-      <button class='btn btn-primary'>List</button>
-      <button class='btn btn-primary'>Reviewers</button>
+        Welcome to {{title}}!
+  
+        <button id= "searchBarButton"  >Search</button>
+        <input class= "searchBar" type="text" #MovieTitle>
+        
+  
+        <button class='btn btn-primary'>Films</button> <!-- (click) = 'toggleImage()' -->
+        <button class='btn btn-primary'>List</button>
+        <button class='btn btn-primary'>Reviewers</button>
+    </div>
+  
+    <div id="Sidebar">
+      <div>
+          <img id='ProfilePic' src="../images/ProfilePic.png">
+      </div>
+  
+    <ul class="SidebarList">
+  
+      <li> <a class="button js-button">Popular Films</a> </li>
+      <li> <a class="button js-button">Profile</a> </li>
+      <li> <a class="button js-button">Sign in</a> </li>
+      <!-- Need to create an anchor for the create account -->
+    </ul>
+  
+    </div>
+  
+    <div id="MainBody">
+        <!-- <app-films-component></app-films-component>
+        <app-list-component></app-list-component> -->
+        <app-profile></app-profile>
+    </div>
+  
   </div>
 
-  <div id="MainBody">
-      <app-films-component></app-films-component>
+
+
+
+
+
+<div class="footer navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left text-muted">© 2017 - The Cookbook
+      </p>
+    </div>
   </div>
-
-</div>
-</body>
-</html>
-
