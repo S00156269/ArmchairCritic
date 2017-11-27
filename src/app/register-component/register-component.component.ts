@@ -14,20 +14,19 @@ export class RegisterComponentComponent {
   email: string;
   password: string;
   confirmpassword: string;
-
+  public invalid: boolean;
   constructor(public authService: AuthService, public router: Router) {
-
+    this.invalid = false;
   }
 
   validate(){
-    if(this.password.length <6 ){
-      alert("Password needs to be longer than 6 characters.");
-    }
     if(this.password == this.confirmpassword){
+      this.invalid = false;
       this.signup();
     }
-    else
-      alert("Passwords don't match");
+    else{
+     this.invalid = true;
+    } 
   }
 
   signup() {
