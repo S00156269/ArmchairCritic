@@ -51,4 +51,5 @@ const appRoutes: Routes = [
   providers: [AuthService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

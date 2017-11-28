@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+
 @Component({
   selector: 'app-films-component',
   templateUrl: './films-component.component.html',
@@ -8,7 +9,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class FilmsComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
+
+
+
+
+
+
 
   ngOnInit() {
   }

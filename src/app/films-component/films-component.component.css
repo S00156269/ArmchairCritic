@@ -1,0 +1,10 @@
+#container{
+    height: 100%;
+    width: 100%;
+}
+
+.col-sm-1{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
