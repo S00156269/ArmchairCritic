@@ -1,3 +1,23 @@
-<p>
-  films-component works!
-</p>
+<div id="container">
+
+  Popular Films
+  
+  <!-- <div class="row">
+    <div class="col-sm-1" style="background-color:blue;" >row</div>
+    <div class="col-sm-1" style="background-color:green;" >row</div>
+    <div class="col-sm-1" style="background-color:yellow;">row</div>
+    <div class="col-sm-1" style="background-color:pink;">your</div>
+    <div class="col-sm-1" style="background-color:orange;">boat</div>
+    </div> -->
+  
+    <tbody>
+    <tr *ngFor="let show of filteredShows" >
+      <td>{{show.Title}}</td>
+      <td>{{show.Type}}</td>
+      <td>{{show.releaseDate}}</td>
+      <td>{{show.description}}</td>
+    </tr>
+  </tbody>
+
+<!-- End of containter -->
+</div>

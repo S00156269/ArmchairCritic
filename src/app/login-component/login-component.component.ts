@@ -21,6 +21,7 @@ export class LoginComponentComponent {
   login() {
     this.authService.login(this.email, this.password);
     this.email = this.password = '';
+    
   }
 
   logout() {
