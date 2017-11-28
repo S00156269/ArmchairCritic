@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+import { iMDBService } from '../Shared/iMDB.service';
+import { FormsModule } from '@angular/forms';
+=======
 import { RouterModule, Routes } from '@angular/router';
+>>>>>>> c5286c51965c0702e14fd78dc0630b64576c6f08
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +14,9 @@ import { ListComponentComponent } from './list-component/list-component.componen
 import { SearchComponent } from './search/search.component';
 import { ReviewersComponent } from './reviewers/reviewers.component';
 import { ProfileComponent } from './profile/profile.component';
+<<<<<<< HEAD
+import { HttpClientModule } from '@angular/common/http';
+=======
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
 import { AuthService } from './shared/auth.service';
@@ -16,6 +24,7 @@ import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { EditprofileComponent } from './editprofile/editprofile.component';
+>>>>>>> c5286c51965c0702e14fd78dc0630b64576c6f08
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponentComponent},
@@ -38,6 +47,13 @@ const appRoutes: Routes = [
     EditprofileComponent
   ],
   imports: [
+<<<<<<< HEAD
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+  ],
+  providers: [iMDBService],
+=======
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     RouterModule.forRoot(
@@ -49,6 +65,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     ],
   providers: [AuthService, AngularFireAuth],
+>>>>>>> c5286c51965c0702e14fd78dc0630b64576c6f08
   bootstrap: [AppComponent]
 })
 export class AppModule { 

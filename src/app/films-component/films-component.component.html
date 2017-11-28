@@ -2,40 +2,22 @@
 
   Popular Films
   
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-sm-1" style="background-color:blue;" >row</div>
     <div class="col-sm-1" style="background-color:green;" >row</div>
     <div class="col-sm-1" style="background-color:yellow;">row</div>
     <div class="col-sm-1" style="background-color:pink;">your</div>
     <div class="col-sm-1" style="background-color:orange;">boat</div>
-    </div>
+    </div> -->
   
-
-  <div class="row">
-    <div class="col-sm-1" style="background-color:blue;" >row</div>
-    <div class="col-sm-1" style="background-color:green;" >row</div>
-    <div class="col-sm-1" style="background-color:yellow;" >row</div>
-    <div class="col-sm-1" style="background-color:pink;">your</div>
-    <div class="col-sm-1" style="background-color:orange;">boat</div>
-  </div>
-
-  <div class="row">
-    ...
-  </div>
+    <tbody>
+    <tr *ngFor="let show of filteredShows" >
+      <td>{{show.Title}}</td>
+      <td>{{show.Type}}</td>
+      <td>{{show.releaseDate}}</td>
+      <td>{{show.description}}</td>
+    </tr>
+  </tbody>
 
 <!-- End of containter -->
 </div>
-
-  
-  
-  
-  
-  <!-- 
-    
-    [(ngModel)]=MovieName
-    
-    echo '{}' |  \
-  http GET 'https://api.themoviedb.org/3/movie/2/images?language=en-US&api_key=b1486a6362ec4507649074230d7aa50b'
-
-http://files.tmdb.org/p/exports/movie_ids_04_28_2017.json.gz
-    https://api.themoviedb.org/3/movie/550?api_key=b1486a6362ec4507649074230d7aa50b&callback=test     This is working, key is correct  -->
