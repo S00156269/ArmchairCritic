@@ -1,3 +1,5 @@
+import { iMDBService } from '../Shared/iMDB.service';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,6 +10,7 @@ import { ListComponentComponent } from './list-component/list-component.componen
 import { SearchComponent } from './search/search.component';
 import { ReviewersComponent } from './reviewers/reviewers.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,9 +23,11 @@ import { ProfileComponent } from './profile/profile.component';
     ProfileComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [iMDBService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
