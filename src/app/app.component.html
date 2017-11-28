@@ -24,7 +24,8 @@
     <div id="Sidebar">
       <div>
       </div>
-  
+    </div>
+
     <ul class="SidebarList">
 
       <li>
@@ -35,17 +36,20 @@
       </li>
       <li>
         <a class="button js-button" [routerLink]="['/login']">Sign in</a>
+        <a class="button js-button">Profile</a>
+      </li>
+      <li>
+        <a class="button js-button">Sign in</a>
       </li>
       <!-- Need to create an anchor for the create account -->
     </ul>
-  
-    </div>
-  
-    <div id="MainBody">
-         <app-films-component></app-films-component>
-        <!-- <app-list-component></app-list-component> 
+
+  </div>
+
+  <div id="MainBody">
+    <app-films-component></app-films-component>
+    <!-- <app-list-component></app-list-component> 
         <app-profile></app-profile> -->
-    </div>
   </div>
 
   <div id="MainBody">
@@ -54,9 +58,10 @@
     <router-outlet></router-outlet>
   </div>
 </div>
+
 <div class="footer navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <p class="navbar-text pull-left text-muted">© 2017 - The Cookbook
-      </p>
-    </div>
+  <div class="container">
+    <p class="navbar-text pull-left text-muted">© 2017 - The Cookbook
+    </p>
   </div>
+</div>
