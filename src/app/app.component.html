@@ -1,54 +1,50 @@
 <div id="wrapper" class='panel panel-primary'>
-    <div class='panel-heading'>
+  <div class='panel-heading'>
 
-        <a class="btn btn-secondary"  id="menuToggle">&#9776;</a>
+    <a class="btn btn-secondary" id="menuToggle">&#9776;</a>
 
-        Welcome to {{title}}!
-  
-        <button id= "searchBarButton"  >Search</button>
-        <input class= "searchBar" type="text" #MovieTitle>
-        
-  
-        <button class='btn btn-primary'>Films</button> <!-- (click) = 'toggleImage()' -->
-        <button class='btn btn-primary'>List</button>
-        <button class='btn btn-primary'>Reviewers</button>
+    Welcome to {{title}}!
+
+    <button id="searchBarButton">Search</button>
+    <input class="searchBar" type="text" #MovieTitle>
+
+
+    <button class='btn btn-primary'>Films</button>
+    <!-- (click) = 'toggleImage()' -->
+    <button class='btn btn-primary'>List</button>
+    <button class='btn btn-primary'>Reviewers</button>
+  </div>
+
+  <div id="Sidebar">
+    <div>
+      <img id='ProfilePic' src="../images/ProfilePic.png">
     </div>
-  
-    <div id="Sidebar">
-      <div>
-          <img id='ProfilePic' src="../images/ProfilePic.png">
-      </div>
-  
+
     <ul class="SidebarList">
-  
-      <li> <a class="button js-button">Popular Films</a> </li>
-      <li> <a class="button js-button">Profile</a> </li>
-      <li> <a class="button js-button">Sign in</a> </li>
+
+      <li>
+        <a class="button js-button">Popular Films</a>
+      </li>
+      <li>
+        <a class="button js-button" [routerLink]="['/profile']">Profile</a>
+      </li>
+      <li>
+        <a class="button js-button" [routerLink]="['/login']">Sign in</a>
+      </li>
       <!-- Need to create an anchor for the create account -->
     </ul>
-  
-    </div>
-  
-    <div id="MainBody">
-        <!-- <app-films-component></app-films-component>
+
+  </div>
+
+  <div id="MainBody">
+    <!-- <app-films-component></app-films-component>
         <app-list-component></app-list-component> -->
-        <app-profile></app-profile>
-    </div>
-  
+    <router-outlet></router-outlet>
   </div>
-
 </div>
-  <router-outlet></router-outlet>
-</body>
-</html>
-
-
-
-
-
 <div class="footer navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <p class="navbar-text pull-left text-muted">© 2017 - The Cookbook
-      </p>
-    </div>
+  <div class="container">
+    <p class="navbar-text pull-left text-muted">© 2017 - The Cookbook
+    </p>
   </div>
+</div>
