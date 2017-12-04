@@ -1,4 +1,4 @@
-import { iMDBService } from '../Shared/iMDB.service';
+import { iMDBService } from '../app/shared/iMDB.service';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

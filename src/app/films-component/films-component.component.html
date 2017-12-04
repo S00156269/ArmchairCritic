@@ -1,15 +1,10 @@
+<h2>Popular Films</h2>
 <div id="container">
 
-  Popular Films
-  
-    <tbody>
-    <tr *ngFor="let show of filteredShows" >
-      <td>{{show.Title}}</td>
-      <td>{{show.Type}}</td>
-      <td>{{show.releaseDate}}</td>
-      <td>{{show.description}}</td>
-    </tr>
-  </tbody>
+    <div class = "PosterDiv" *ngFor="let show of shows">
+      <!-- put in a href -->
+      <img class='Poster' [src]= "getUrl(show.poster_path)">
+    </div>
 
 <!-- End of containter -->
 </div>
