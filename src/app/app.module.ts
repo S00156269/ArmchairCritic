@@ -1,4 +1,4 @@
-import { iMDBService } from '../Shared/iMDB.service';
+import { iMDBService } from '../app/shared/iMDB.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -49,9 +49,10 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
     ],
-  providers: [AuthService, AngularFireAuth,iMDBService],
+  providers: [AuthService, AngularFireAuth, iMDBService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { 
