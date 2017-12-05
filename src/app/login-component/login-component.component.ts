@@ -10,18 +10,17 @@ import { AuthService } from '../shared/auth.service'
 export class LoginComponentComponent {
   email: string;
   password: string;
-
+  success: boolean;
   constructor(public authService: AuthService) { }
 
-  signup() {
-    this.authService.signup(this.email, this.password);
-    this.email = this.password = '';
-  }
-
   login() {
-    this.authService.login(this.email, this.password);
-    this.email = this.password = '';
-    
+    if(this.authService.login(this.email, this.password)){
+      this.email = this.password = '';
+      this.success = true;
+    }
+    else{
+      this.success = false;
+    }
   }
 
   logout() {
