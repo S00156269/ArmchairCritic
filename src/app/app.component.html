@@ -1,7 +1,7 @@
 <div id="wrapper" class='panel panel-primary'>
-    <div class='panel-heading'>
+  <div class='panel-heading'>
 
-        <a class="btn btn-secondary"  id="menuToggle">&#9776;</a>
+    <a class="btn btn-secondary" id="menuToggle">&#9776;</a>
 
         Welcome to {{title}}!
         
@@ -11,19 +11,30 @@
         <button class='btn btn-primary'>List</button>
         <button class='btn btn-primary'>Reviewers</button>
     </div>
+
   
     <div id="Sidebar">
       <div>
       </div>
-  
+    </div>
+
     <ul class="SidebarList">
-  
-      <li> <a class="button js-button">Popular Films</a> </li>
-      <li> <a class="button js-button">Profile</a> </li>
-      <li> <a class="button js-button">Sign in</a> </li>
+
+      <li>
+        <a class="button js-button">Popular Films</a>
+      </li>
+      <li>
+        <a class="button js-button" [routerLink]="['/profile']">Profile</a>
+      </li>
+      <li>
+        <a class="button js-button" [routerLink]="['/login']">Sign in</a>
+        <a class="button js-button">Profile</a>
+      </li>
+      <li>
+        <a class="button js-button">Sign in</a>
+      </li>
       <!-- Need to create an anchor for the create account -->
-    </ul>
-  
+    </ul>  
     </div>
   
     <div id="MainBody">
