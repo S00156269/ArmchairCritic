@@ -10,8 +10,7 @@ import { iMDBService } from '../shared/iMDB.service';
 })
 export class FilmsComponentComponent implements OnInit {
   errorMessage: any;
-  imageWidth: number = 100;
-  imageMargin: number = 4;
+
 
 
   _listFilter: string = "";
@@ -39,6 +38,7 @@ export class FilmsComponentComponent implements OnInit {
   {    
     return "https://image.tmdb.org/t/p/w1280" + value;
   }
+
   public ngOnInit(): void {
     this._iMDBService.getiMDB().subscribe( shows => {
       this.shows=shows.results, 

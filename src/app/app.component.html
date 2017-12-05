@@ -4,10 +4,8 @@
         <a class="btn btn-secondary"  id="menuToggle">&#9776;</a>
 
         Welcome to {{title}}!
-  
-        <button id= "searchBarButton"  >Search</button>
-        <input class= "searchBar" type="text" #MovieTitle>
         
+        <app-search></app-search>
   
         <button class='btn btn-primary'>Films</button> <!-- (click) = 'toggleImage()' -->
         <button class='btn btn-primary'>List</button>
@@ -29,8 +27,8 @@
     </div>
   
     <div id="MainBody">
-         <app-films-component></app-films-component>
-        <!-- <app-list-component></app-list-component> 
+        <!-- <app-films-component></app-films-component>
+        <app-list-component></app-list-component> 
         <app-profile></app-profile> -->
     </div>
   
